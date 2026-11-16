@@ -23,11 +23,11 @@ function setup() {
 function draw() {
     noFill();
     stroke(255, 10, 20, 50);
-    ellipse(mouseX, mouseY, 50, 50);
+    ellipse(mouseX, mouseY, 25, 75);
     image(abstraitImage, 100, 100, 50, 50);
     //image(refletImage, 0, 0);
-    noFill();
-    stroke(200, 10, 100);
+    //noFill();
+    //stroke(200, 10, 100);
     //copy(refletImage, mouseX,mouseY, 100, 100, mouseX + refletImage.width, mouseY, 100, 100);
    
 
@@ -42,6 +42,13 @@ function mouseDragged() {
 function mousePressed() {
     copy(abstraitImage, mouseX,mouseY, 10, 10, mouseX + abstraitImage.width, mouseY, 40, 40);
 }
+
+function mouseReleased() {
+    background(10, 20, 30, 30);
+
+
+}
+    
 
 /*
 Pistes d’exploration — choisissez une idée ou suivez la vôtre.

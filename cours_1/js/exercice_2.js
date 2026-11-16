@@ -1,25 +1,35 @@
 
-let refletImage;
+//let refletImage;
+let abstraitImage;
 
 function preload() {
-    refletImage = loadImage("./assets/images/reflet.jpg"); // ./ = reculer/sortir du dossier actuel
+    //refletImage = loadImage("./assets/images/reflet.jpg"); // ./ = reculer/sortir du dossier actuel
+    abstraitImage = loadImage("./assets/images/abstrait.jpg"); // ./ = reculer/sortir du dossier actuel
 
 
     
    } 
 
 function setup() {
-    createCanvas(refletImage.width * 2, refletImage.height);
+    abstraitImage.resize(300, 300);
+    createCanvas(abstraitImage.width*2, abstraitImage.height);
     background(0);
-    image(refletImage, 0,0);
+    //image(refletImage, 0,0);
     //copy(refletImage, 0, 0, 100, 100, width/2, height/2, 100, 100);
     //  position depart, grosseurDepart(chercher dans l'image),,grosseur copie fin
 
 }
 
 function draw() {
+    noFill();
+    stroke(255, 10, 20, 50);
+    ellipse(mouseX, mouseY, 50, 50);
+    image(abstraitImage, 100, 100, 50, 50);
+    //image(refletImage, 0, 0);
+    noFill();
+    stroke(200, 10, 100);
     //copy(refletImage, mouseX,mouseY, 100, 100, mouseX + refletImage.width, mouseY, 100, 100);
-    rect(mouseX, mouseY, 100, 100);
+   
 
 }
 
@@ -30,7 +40,7 @@ function mouseDragged() {
 }
 
 function mousePressed() {
-    copy(refletImage, mouseX,mouseY, 100, 100, mouseX + refletImage.width, mouseY, 100, 100);
+    copy(abstraitImage, mouseX,mouseY, 10, 10, mouseX + abstraitImage.width, mouseY, 40, 40);
 }
 
 /*
